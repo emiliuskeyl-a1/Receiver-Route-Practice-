@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playcall Visualizer</title>
+  <style>
+    body { text-align: center; font-family: sans-serif; margin-top: 40px; }
+    button { padding: 10px 20px; font-size: 18px; }
+    img { margin-top: 20px; width: 80%; border: 2px solid #333; }
+  </style>
+</head>
+<body>
+  <h1>🏈 Random Play Visualizer</h1>
+  <button onclick="generate()">Generate Play</button>
+  <br><br>
+  <img id="playImg" src="" alt="Your Play will appear here">
+
+  <script>
+    async function generate() {
+      const img = document.getElementById("playImg");
+      img.src = "https://DEIN-RENDER-NAME.onrender.com/random_play?" + Date.now();
+    }
+  </script>
+</body>
+</html>
